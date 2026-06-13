@@ -3,37 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#060b14">
+  <meta name="description" content="KAYOUX — Bot Discord de sécurité. Filtrage de fichiers et messages suspects.">
   <title>KAYOUX — Bot de sécurité Discord</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #1e1f22; }
-    a { color: #5865f2; }
-    header { border-bottom: 1px solid #e3e5e8; margin-bottom: 2rem; padding-bottom: 1rem; }
-    .card { background: #f2f3f5; border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
-    footer { margin-top: 3rem; font-size: 0.9rem; color: #5c5e66; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>KAYOUX</h1>
-    <p>Bot Discord de sécurité — filtrage de fichiers et messages suspects.</p>
-  </header>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="page">
+    <header class="site-header">
+      <svg class="logo-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M32 4L52 14v20L32 54 12 34V14L32 4z" stroke="#0ea5e9" stroke-width="2" fill="rgba(14,165,233,0.08)"/>
+        <path d="M32 18v20M22 28h20" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="32" cy="28" r="6" fill="#0ea5e9" opacity="0.25"/>
+        <circle cx="32" cy="28" r="3" fill="#38bdf8"/>
+      </svg>
+      <div>
+        <h1 class="brand-title">KAYOUX</h1>
+        <p class="brand-tagline">Protection Discord · filtrage intelligent</p>
+        <span class="status-pill">Système actif</span>
+      </div>
+    </header>
 
-  <p>KAYOUX aide les administrateurs de serveurs Discord à détecter et bloquer les fichiers dangereux, les fausses images et certains comportements abusifs.</p>
+    <nav class="site-nav" aria-label="Navigation">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="terms.html">Conditions</a>
+      <a href="privacy.html">Confidentialité</a>
+    </nav>
 
-  <div class="card">
-    <h2>Inviter le bot</h2>
-    <p>Utilise le lien d'installation configuré dans le <a href="https://discord.com/developers/applications" target="_blank" rel="noopener">Discord Developer Portal</a> (scope <code>bot</code> + <code>applications.commands</code>, permissions minimales).</p>
-    <p>Après l'ajout : lance <strong>/setup panel</strong> sur ton serveur.</p>
+    <main class="panel">
+      <p class="hero-text">
+        KAYOUX aide les administrateurs à détecter et bloquer les fichiers dangereux,
+        les fausses images et certains comportements abusifs — sans configuration technique complexe.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <strong>Fichiers</strong>
+          <span>Extensions dangereuses, doubles extensions, archives</span>
+        </div>
+        <div class="feature">
+          <strong>Messages</strong>
+          <span>Liens suspects, ghost pings, clients modifiés</span>
+        </div>
+        <div class="feature">
+          <strong>Setup</strong>
+          <span>Configuration via <code>/setup panel</code> dans Discord</span>
+        </div>
+      </div>
+
+      <h2 class="card-title">Inviter le bot</h2>
+      <p>Ajoute KAYOUX à ton serveur avec les permissions minimales requises, puis lance <code>/setup panel</code>.</p>
+      <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1514392721362522263&amp;permissions=1099511720960&amp;scope=bot+applications.commands" target="_blank" rel="noopener">
+        Ajouter à Discord
+      </a>
+
+      <h2 class="card-title" style="margin-top: 1.75rem;">Documents légaux</h2>
+      <ul class="legal-links">
+        <li><a href="terms.html">Conditions d'utilisation</a></li>
+        <li><a href="privacy.html">Politique de confidentialité</a></li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <p>© KAYOUX — Conforme aux
+        <a href="https://support-dev.discord.com/hc/articles/8562894815383" target="_blank" rel="noopener">Discord Developer Terms</a>
+        et à la
+        <a href="https://support-dev.discord.com/hc/articles/8563934450327" target="_blank" rel="noopener">Discord Developer Policy</a>.
+      </p>
+    </footer>
   </div>
-
-  <h2>Documents légaux</h2>
-  <ul>
-    <li><a href="terms.html">Conditions d'utilisation</a></li>
-    <li><a href="privacy.html">Politique de confidentialité</a></li>
-  </ul>
-
-  <footer>
-    <p>© KAYOUX — Conforme aux <a href="https://support-dev.discord.com/hc/articles/8562894815383">Discord Developer Terms of Service</a> et à la <a href="https://support-dev.discord.com/hc/articles/8563934450327">Discord Developer Policy</a>.</p>
-  </footer>
 </body>
 </html>
